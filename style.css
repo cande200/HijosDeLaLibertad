@@ -12,6 +12,8 @@ header {
     background: black;
     color: white;
     padding: 10px 20px;
+    position: relative;
+    z-index: 1; /* Asegúrate de que el header esté por encima */
 }
 
 header img {
@@ -22,7 +24,6 @@ header img {
 h1 {
     margin: 0;
     flex-grow: 1;
-    text-align: center;
 }
 
 nav {
@@ -61,7 +62,6 @@ nav {
     display: flex;
     justify-content: center;
     margin: 20px 0;
-
 }
 
 .search-form input {
@@ -80,32 +80,63 @@ nav {
     margin-left: 5px;
 }
 
-.principalproducts {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Permite que los productos se ajusten a la siguiente fila */
-    padding: 10px; 
+.container {
+    display: flex; /* Flex para alinear sidebar y productos */
+    margin-top: 20px; /* Espacio entre el header y el contenido */
+}
+
+.sidebar {
+    width: 200px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-right: 20px; /* Espacio entre sidebar y productos */
 }
 
 .product-list {
     display: flex;
-    gap: 20px; /* Espacio entre productos */
+    flex-wrap: wrap; /* Permite que los productos se ajusten */
+    justify-content: flex-start; /* Alinea los productos a la izquierda */
+    gap: 20px;
+    margin-top: 20px; /* Espacio para evitar que el header tape las imágenes */
 }
 
 .product {
-    min-width: 200px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
     text-align: center;
-    background: #fff;
-    transition: box-shadow 0.3s;
+    min-width: 220px;
+    margin: 10px;
+}
+
+.image-container {
+    overflow: hidden; 
+    width: 200px; 
+    height: 220px; 
+    margin: auto; /* Centrar la imagen */
 }
 
 .product img {
-    width: 100px;
-    height: auto;
+    width: 100%; 
+    height: auto; 
+    transition: transform 0.5s ease; 
+}
+
+.image-container:hover img {
+    transform: scale(1.2); 
+}
+
+.color-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.color {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 2px solid #fff; 
 }
 
 .product:hover {
@@ -117,132 +148,94 @@ nav {
     color: white;
     text-align: center;
     padding: 20px;
-    position: relative;
-    display: flex;
-    flex-direction: column; /* Asegúrate de que el título y el texto estén en columna */
-    align-items: center; /* Centra los elementos */
 }
 
 .footer-content p {
-    margin: 5px 0; /* Espacio entre los párrafos */
+    margin: 5px 0;
 }
 
 .social-media {
-    display: flex; /* Usar flexbox para alinear social media horizontalmente */
-    justify-content: center; /* Centra los enlaces */
-    margin-top: 10px; /* Espacio superior */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .social-media a {
     color: white;
-    margin: 0 10px; /* Espacio entre enlaces */
+    margin: 0 10px;
     text-decoration: none;
 }
 
 .social-media a:hover {
-    text-decoration: underline; /* Subraya al pasar el mouse */
+    text-decoration: underline;
 }
 
-
 .reviews {
-    background: #f9f9f9; /* Fondo claro para la sección de reseñas */
+    background: #f9f9f9;
     padding: 20px;
     text-align: center;
 }
-.review img{
-    max-height: 40px;
-    max-width: auto;
-    justify-content: center;
-}
 
 .review-list {
-    display: flex; /* Cambia a flex para alinear horizontalmente */
-    justify-content: center; /* Centra las reseñas en el contenedor */
-    flex-wrap: wrap; /* Permite que las reseñas se ajusten a la siguiente fila si no hay espacio */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .review {
-    background: #fff; /* Fondo blanco para cada reseña */
-    border: 1px solid #ccc; /* Borde sutil */
-    border-radius: 5px; /* Bordes redondeados */
+    background: #fff;
+    border-radius: 5px;
     padding: 15px;
-    margin: 10px; /* Espacio entre reseñas */
-    width: 250px; /* Ancho fijo para las reseñas */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin: 10px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .review h3 {
     margin: 0;
-    color: #333; /* Color del nombre */
+    color: #333;
 }
 
 .review p {
-    margin: 5px 0; /* Espacio entre párrafos */
+    margin: 5px 0;
 }
-
-
-
-.videosmuestra {
-    background: #f9f9f9; /* Fondo claro para la sección de reseñas */
-    padding: 20px;
-    text-align: center;
-}
-.videosmuestra iframe{
-    max-height: 400px;
-    max-width: auto;
-    justify-content: center;
-}
-
-.videos-list {
-    display: flex; /* Cambia a flex para alinear horizontalmente */
-    justify-content: center; /* Centra las reseñas en el contenedor */
-    flex-wrap: wrap; /* Permite que las reseñas se ajusten a la siguiente fila si no hay espacio */
-}
-
-.videosmuestra {
-    background: #fff; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    padding: 15px;
-    margin: 10px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-}
-
-.videos h2 {
-    text-align: center;
-    margin: 0;
-    color: #333;
-    font-size: 40px;
-}
-
-.videos p {
-    margin: 5px 0; /* Espacio entre párrafos */
-}
-
-
 
 @media (max-width: 600px) {
     .nav-list {
-        display: none; /* Oculta la lista de navegación por defecto */
-        flex-direction: column; /* Muestra en columna */
-        position:absolute;
+        display: none;
+        flex-direction: column;
+        position: fixed; /* Cambiar a fixed para ocupar toda la pantalla */
         text-align: center;
-        top: 75px; /* Ajusta según la altura del header */
-        right: 0;
+        top: 40; /* Iniciar desde la parte superior */
+        right: 0; /* Alinear a la derecha */
         background: black;
         width: 100%;
+        height: 100%; /* Ocupar toda la altura de la pantalla */
         color: white;
+        z-index: 2; /* Asegúrate de que esté encima de otros elementos */
+        padding-top: 60px; /* Espacio superior para que no se superponga con el header */
     }
 
     .nav-list.active {
-        display: flex; /* Muestra la lista cuando está activa */
+        display: flex; /* Mostrar el menú cuando esté activo */
+    }
+
+    .nav-list li {
+        margin: 20px 0; /* Margen entre los enlaces */
     }
 
     .menu-toggle {
-        display: flex; /* Muestra el botón de menú hamburguesa */
+        display: flex;
     }
 
     .product {
         flex: 1 0 100%; /* Los productos ocupan todo el ancho en pantallas pequeñas */
+    }
+
+    .sidebar {
+        border-style: 2px solid black;
+        width: 100%; /* La sidebar ocupa todo el ancho en pantallas pequeñas */
+        margin-right: 0; /* Sin margen derecho */
+        margin-bottom: 20px; /* Margen inferior */
     }
 }

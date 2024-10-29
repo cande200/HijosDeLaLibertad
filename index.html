@@ -10,13 +10,13 @@
 
 <body>
     <header>
-        <img src="" alt="Logo">
-        <h1>H.D.L.L</h1>
+        <img src="img/header-img.jpg" alt="Logo">
+        <h1>Hijos De la Libertad</h1>
         <nav>
             <div class="menu-toggle" id="mobile-menu">
-                <span class="bar">Inicio</span>
-                <span class="bar">Productos</span>
-                <span class="bar">Contacto</span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
             <ul class="nav-list">
                 <li><a href="#">Inicio</a></li>
@@ -26,100 +26,130 @@
             </ul>
         </nav>
     </header>
-    
-
 
     <main>
-  
+        <div class="container">
+            <!-- Sidebar de filtros -->
+            <aside class="sidebar">
+                <h2>Filtrar por Color</h2>
+                <div class="filter-group">
+                    <input type="checkbox" id="aqua" name="color" value="aqua">
+                    <label for="aqua">Aqua</label><br>
+                    <input type="checkbox" id="beige" name="color" value="beige">
+                    <label for="beige">Beige</label><br>
+                    <input type="checkbox" id="negro" name="color" value="negro">
+                    <label for="negro">Negro</label><br>
+                </div>
 
-        <div id="product-list" class="product-list">
-            <div class="product">
-                <img src="img/modelo-1.jpeg" alt="Producto 1">
-                <h2>Remera Hombre</h2>
-                <p></p>
-                <p><strong>Precio: $24.199,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/modelo-2.jpeg" alt="Producto 2">
-                <h2>Remera Mujer</h2>
-                <p></p>
-                <p></p>
-                <p><strong>Precio: $15.650,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/modelo-3.jpeg" alt="Producto 3">
-                <h2> Remera Mujer</h2>
-                <p></p>
-                <p></p>
-                <p><strong>Precio: $15.650,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/modelo-4.jpeg" alt="Producto 4">
-                <h2>Remera hombre</h2>
-                <p></p>
-                <p></p>
-                <p><strong>Precio: $10.050,00</strong></p>
-            </div>
-            <div class="product">
-                <img src="img/modelo-5.jpeg" alt="Producto 4">
-                <h2>Remera hombre</h2>
-                <p></p>
-                <p></p>
-                <p><strong>Precio: $15.050,00</strong></p>
+                <h2>Filtrar por Talle</h2>
+                <div class="filter-group">
+                    <input type="checkbox" id="talle34" name="size" value="34">
+                    <label for="talle34">34</label><br>
+                    <input type="checkbox" id="talle36" name="size" value="36">
+                    <label for="talle36">36</label><br>
+                    <input type="checkbox" id="talle38" name="size" value="38">
+                    <label for="talle38">38</label><br>
+                </div>
+            </aside>
+
+            <div id="product-list" class="product-list">
+                <!-- Aquí van los productos  -->
+                <div class="product">
+                    <div class="image-container">
+                        <img src="img/modelo-1.jpeg" alt="Producto 1" class="product-image">
+                    </div>
+                    <!--ACA TE DEJO LA MUESTRA DE COMO TENES QUE HACER CON LOS OTROS PRODUCTOS PARA QUE CAMBIEN LA FOTO SE CAMBIA EN DATA-IMAGE-->
+                    <h2>Remera Hombre</h2>
+                    <div class="color-options">
+                        <span class="color original" data-image="img/modelo-1.jpeg" style="background-color: original-color; border: 1px solid black;"></span> 
+                        <span class="color" data-image="img/modelo-2.jpeg" style="background-color: red; border: 1px solid black;"></span>
+                        <span class="color" data-image="img/modelo-3.jpeg" style="background-color: blue; border: 1px solid black;"></span>
+                        <span class="color" data-image="img/modelo-4.jpeg" style="background-color: green; border: 1px solid black;"></span>
+                    </div>
+                    <p><strong>Precio: $24.199,00</strong></p>
+                </div>
+                <div class="product">
+                    <div class="image-container">
+                        <img src="img/modelo-2.jpeg" alt="Producto 1" class="product-image">
+                    </div>
+                    <h2>Remera Mujer</h2>
+                    <div class="color-options">
+                        <span class="color" data-image="img/modelo-1-color1.jpeg" style="background-color: red; border: 1px solid black;"></span>
+                        <span class="color" data-image="img/modelo-1-color2.jpeg" style="background-color: blue; border: 1px solid black;"></span>
+                        <span class="color" data-image="img/modelo-1-color3.jpeg" style="background-color: green; border: 1px solid black;"></span>
+                    </div>
+                    <p><strong>Precio: $24.199,00</strong></p>
+                </div>
+                <div class="product">
+                    <div class="image-container">
+                        <img src="img/modelo-3.jpeg" alt="Producto 1" class="product-image">
+                    </div>
+                    <h2>Remera Mujer</h2>
+                    <div class="color-options">
+                        <span class="color" data-image="img/modelo-1-color1.jpeg" style="background-color: red; border: 1px solid black;"></span>
+                        <span class="color" data-image="img/modelo-1-color2.jpeg" style="background-color: blue; border: 1px solid black;"></span>
+                        <span class="color" data-image="img/modelo-1-color3.jpeg" style="background-color: green; border: 1px solid black;"></span>
+                    </div>
+                    <p><strong>Precio: $24.199,00</strong></p>
+                </div>
+                <div class="product">
+                    <div class="image-container">
+                        <img src="img/modelo-4.jpeg" alt="Producto 1" class="product-image">
+                    </div>
+                    <h2>Remera Hombre</h2>
+                    <div class="color-options">
+                        <span class="color" data-image="img/modelo-1-color1.jpeg" style="background-color: red; border: 1px solid black;"></span>
+                        <span class="color" data-image="img/modelo-1-color2.jpeg" style="background-color: blue; border: 1px solid black;"></span>
+                        <span class="color" data-image="img/modelo-1-color3.jpeg" style="background-color: green; border: 1px solid black;"></span>
+                    </div>
+                    <p><strong>Precio: $24.199,00</strong></p>
+                </div>
+                <div class="product">
+                    <div class="image-container">
+                        <img src="img/modelo-5.jpeg" alt="Producto 1" class="product-image">
+                    </div>
+                    <h2>Remera Hombre</h2>
+                    <div class="color-options">
+                        <span class="color" data-image="img/modelo-1-color1.jpeg" style="background-color: red; border: 1px solid black;"></span>
+                        <span class="color" data-image="img/modelo-1-color2.jpeg" style="background-color: blue; border: 1px solid black;"></span>
+                        <span class="color" data-image="img/modelo-1-color3.jpeg" style="background-color: green; border: 1px solid black;"></span>
+                    </div>
+                    <p><strong>Precio: $24.199,00</strong></p>
+                </div>
+                <!-- Agrega los otros productos de manera similar -->
             </div>
         </div>
-       
-        
-        
-   
-
     </main>
 
     <form id="searchForm" class="search-form">
         <input type="text" id="buscador" placeholder="Buscar productos...">
-        <select id="tipoProducto">
-            <option value="">Filtrar por tipo</option>
-            <option value="monitores">Remeras Hombres</option> 
-            <option value="placas">Remeras Mujer</option>
-        </select>
-        <label for="ordenarPrecio">Ordenar por precio:</label>
-        <select id="ordenarPrecio">
-            <option value="menor">Menor a mayor</option>
-            <option value="mayor">Mayor a menor</option>
-        </select>
         <button type="submit">Buscar</button>
     </form>
-    <section id = "reviews" class="reviews">
 
+    <section id="reviews" class="reviews">
         <div class="review-list">
             <div class="review">
-               <img src="/primer desafío/INTEGRADOR-RODRIGO MONTES/img/client-svgrepo-com.svg" alt="">
+                <img src="/img/client-svgrepo-com.svg" alt="">
                 <h3>Compra Segura</h3>
                 <p>Una vez que realices tu pedido nos comunicaremos para confirmarlo y proceder con el pago.</p>
             </div>
             <div class="review">
-                <img src="/primer desafío/INTEGRADOR-RODRIGO MONTES/img/client-svgrepo-com.svg" alt="">
+                <img src="/img/client-svgrepo-com.svg" alt="">
                 <h3>Envíos a todo el país</h3>
                 <p>Hacemos envíos a todo el país ya sea por expreso o por correo.</p>
             </div>
             <div class="review">
-                <img src="/primer desafío/INTEGRADOR-RODRIGO MONTES/img/client-svgrepo-com.svg" alt="">
+                <img src="/img/client-svgrepo-com.svg" alt="">
                 <h3>Transporte Mayorista</h3>
                 <p>Trámite de distribución a central de transporte. Sistema exclusivo para mayoristas.</p>
             </div>
         </div>
-    </div>
-   
-</div>
     </section>
-
-
 
     <footer>
         <div class="footer-content">
             <h3>Contáctanos</h3>
             <p>Email: info@tiendatecnologica.com | Teléfono: (123) 456-7890</p>
-
             <div class="social-media">
                 <a href="#">Facebook</a>
                 <a href="#">Instagram</a>
@@ -127,7 +157,6 @@
             </div>
         </div>
     </footer>
-
 
     <script src="app.js"></script>
 </body>
